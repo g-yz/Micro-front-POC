@@ -5,13 +5,15 @@ import { useEffect, useState } from "react";
 function App() {
   const [count, setCount] = useState(0);
 
+  const meessageA = (event) => {
+    setCount((count) => count + 1);
+    console.log("I am listening in React this : ", event?.detail);
+  };
+
   useEffect(() => {
-    window.addEventListener("addToCart", (event) => {
-      setCount((count) => count + 1);
-      console.log("I am listening this", event.detail);
-    });
+    window.addEventListener("addToCart", meessageA, true);
     return () => {
-      window.removeEventListener("addToCart", null);
+      window.removeEventListener("addToCart", meessageA, true);
     };
   }, []);
 
