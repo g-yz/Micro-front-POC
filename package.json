@@ -1,0 +1,20 @@
+{
+	"private": true,
+	"workspaces": {
+		"packages": [
+			"app",
+			"designer",
+			"left-sidebar"
+		]
+	},
+	"scripts": {
+		"start": "lerna run --parallel start",
+		"build": "lerna run build",
+		"serve": "lerna run --parallel serve",
+		"clean": "lerna run --parallel clean",
+		"prepare": "lerna run npm"
+	},
+	"devDependencies": {
+		"lerna": "5.1.6"
+	}
+}
