@@ -6,11 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  counter: number = 0;
   title = 'left-sidebar';
 
   constructor() {}
   // Example React to Angular
-  // Listener
+  // Subscriber
   ngOnInit(): void {
     console.log('When this component has loaded');
     window.addEventListener('scroll', this.scroll, true);
@@ -20,12 +21,13 @@ export class AppComponent implements OnInit {
   }
   scroll = (event: any): void => {
     console.log('I am listening this : ', event?.detail);
+    this.counter++;
   };
 
   // Example Angular to React
   // Publisher
   sendMessage(value: string) {
-    const event = new CustomEvent('addToCart', { detail: 'new conv...' });
+    const event = new CustomEvent('addToCart', { detail: 'from Angular...' });
     window.dispatchEvent(event);
   }
 }
