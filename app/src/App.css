@@ -3,7 +3,7 @@
   height: 100%;
 }
 .header-container{
-  height: 60px;
+  height: 55px;
 }
 .footer-container{
   position: fixed;
@@ -16,7 +16,15 @@
   /* height: calc(100vh - 160px); */
 }
 .content > *{
-  flex:1 50%;
+  /* flex:1 50%; */
+  flex: auto 2 1;
+}
+.designer-module{
+  width: 30%;
+  min-width: 30%;
+}
+.map-content-module{
+  width: 70%;
 }
 .react-logo{
   height: 90px;
@@ -25,4 +33,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.designer-module{
+  width: 100px;
 }

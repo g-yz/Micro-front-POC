@@ -1,5 +1,5 @@
 .wrapper{
-  background-color: peachpuff;
+  background-color: #007FFF;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
@@ -7,10 +7,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  justify-content: space-around;
+}
+.wrapper>div{
+  display: flex;
+  gap:10px;
+  align-items: center;
 }
 .angular-logo{
   height: 25px;
 }
 .counter{
-  color: #fb7861;
+  color: white;
+}
+.btn_angular{
+  background: white;
+  color: rgb(25, 118, 210);
+  border: 1px solid rgba(25, 118, 210, 0.5);
+  border-radius: 4px;
+  padding: 7px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
 }

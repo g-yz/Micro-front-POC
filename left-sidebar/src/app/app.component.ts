@@ -14,10 +14,10 @@ export class AppComponent implements OnInit {
   // Subscriber
   ngOnInit(): void {
     console.log('When this component has loaded');
-    window.addEventListener('scroll', this.scroll, true);
+    window.addEventListener('incrementAngular', this.scroll, true);
   }
   ngOnDestroy(): void {
-    window.removeEventListener('scroll', this.scroll, true);
+    window.removeEventListener('incrementAngular', this.scroll, true);
   }
   scroll = (event: any): void => {
     console.log('I am listening this : ', event?.detail);

@@ -22,26 +22,34 @@ function App() {
   // Example React to Angular
   // Publisher
   const receiveMessageHandler = () => {
-    const event = new CustomEvent("scroll", { detail: "send from React..." });
+    const event = new CustomEvent("incrementAngular", {
+      detail: "send from React...",
+    });
     window.dispatchEvent(event);
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {count}
-        </a>
-        <button onClick={receiveMessageHandler}>Send React powers</button>
+    <div className="containerMain">
+      <header className="content_panel">
+        <div>
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>Panel chat</p>
+        </div>
+        <div>
+          <a
+            className="count_react"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Count: {count}
+          </a>
+          <br />
+          <button onClick={receiveMessageHandler} className="btn_react">
+            Increment
+          </button>
+        </div>
+        <div></div>
       </header>
     </div>
   );
