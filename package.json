@@ -4,7 +4,8 @@
 		"packages": [
 			"app",
 			"designer",
-			"left-sidebar"
+			"left-sidebar",
+			"map-content"
 		]
 	},
 	"scripts": {

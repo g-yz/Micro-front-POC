@@ -26,7 +26,7 @@ module.exports = {
               remotes: {
                 designer: "designer@http://localhost:3001/remoteEntry.js",
                 leftSideBar: "leftSidebar@http://localhost:3002/remoteEntry.js",
-                // chat: "chat@http://localhost:3002/remoteEntry.js",
+                mapContent: "mapContent@http://localhost:3003/remoteEntry.js",
                 // rightSidebar:
                 //   "rightSidebar@http://localhost:3003/remoteEntry.js",
                 // footer: "footer@http://localhost:3004/remoteEntry.js",
