@@ -20,11 +20,11 @@
   flex: auto 2 1;
 }
 .designer-module{
-  width: 30%;
-  min-width: 30%;
+  width: 25%;
+  min-width: 25%;
 }
 .map-content-module{
-  width: 70%;
+  width: 75%;
 }
 .react-logo{
   height: 90px;

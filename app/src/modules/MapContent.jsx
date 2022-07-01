@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { mount } from "mapContent/MapContentModule";
-// import "./LeftSidebar.css";
 
 const MapContentModule = () => {
   const ref = useRef(null);

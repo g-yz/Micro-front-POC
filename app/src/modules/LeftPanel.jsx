@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { mount } from "leftSideBar/leftSideBar";
-// import "./LeftSidebar.css";
 
 const LeftPanelModule = () => {
   const ref = useRef(null);
