@@ -13,21 +13,23 @@ export class AppComponent implements OnInit {
   // Example React to Angular
   // Subscriber
   ngOnInit(): void {
-    console.log('When this component has loaded');
-    window.addEventListener('incrementAngular', this.scroll, true);
+    // console.log('When this component has loaded');
+    window.addEventListener('incrementAngular', this.incrementValue, true);
   }
   ngOnDestroy(): void {
-    window.removeEventListener('incrementAngular', this.scroll, true);
+    window.removeEventListener('incrementAngular', this.incrementValue, true);
   }
-  scroll = (event: any): void => {
-    console.log('I am listening this : ', event?.detail);
+  incrementValue = (event: any): void => {
+    console.log('I am listening in Angular this: ', event?.detail);
     this.counter++;
   };
 
   // Example Angular to React
   // Publisher
   sendMessage(value: string) {
-    const event = new CustomEvent('addToCart', { detail: 'from Angular...' });
+    const event = new CustomEvent('incrementReact', {
+      detail: 'sended from Angular...',
+    });
     window.dispatchEvent(event);
   }
 }

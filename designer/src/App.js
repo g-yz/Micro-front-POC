@@ -7,15 +7,15 @@ function App() {
 
   // Example React to Angular
   // Subscriber
-  const meessageA = (event) => {
+  const incrementCount = (event) => {
     setCount((count) => count + 1);
-    console.log("I am listening in React this : ", event?.detail);
+    console.log("I am listening in React this: ", event?.detail);
   };
 
   useEffect(() => {
-    window.addEventListener("addToCart", meessageA, true);
+    window.addEventListener("incrementReact", incrementCount, true);
     return () => {
-      window.removeEventListener("addToCart", meessageA, true);
+      window.removeEventListener("incrementReact", incrementCount, true);
     };
   }, []);
 
@@ -23,7 +23,7 @@ function App() {
   // Publisher
   const receiveMessageHandler = () => {
     const event = new CustomEvent("incrementAngular", {
-      detail: "send from React...",
+      detail: "sended from React...",
     });
     window.dispatchEvent(event);
   };

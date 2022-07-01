@@ -7,12 +7,12 @@ export const GeoJsonContainer = (props) => {
 
   React.useEffect(() => {
     function __dragTransform(layer) {
-      console.log("__dragTransform");
+      //   console.log("__dragTransform");
       layer._transform(props.transform.matrix);
     }
 
     function dragDropTransform(layer) {
-      console.log("dragDropTransform");
+      //   console.log("dragDropTransform");
       layer.dragging._transformPoints(props.transform.matrix);
       layer._updatePath();
       layer._project();
